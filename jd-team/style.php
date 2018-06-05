@@ -1,11 +1,11 @@
 <?php
 if($field['position_font']) {
-Css::typography("#$id .jd-skilled-team .team-member-wrapper .team-member-info .member-designation", $field['position_font']);
+Css::typography("#".$id." .jd-skilled-team .team-member-wrapper .team-member-info .member-designation", $field['position_font']);
 }
 ?>
 <?php
 if($field['header_font']) {
-Css::typography(".jd-skilled-team .team-member-wrapper .team-member-info .member-name", $field['header_font']);
+Css::typography("#".$id." .jd-skilled-team .team-member-wrapper .team-member-info .member-name", $field['header_font']);
 }
 ?>
 <?php if($field['border']):?>
