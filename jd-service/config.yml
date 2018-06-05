@@ -1,0 +1,193 @@
+name: JD Service
+slug: jd-service
+groups: JoomDev
+form:
+  general:
+    - name: title
+      type: text
+      value: Marketing
+
+    - name: title_tag
+      type: select
+      label: Title Tag
+      value: h2
+      options:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+        h5: H5
+        h6: H6
+
+    - name: link_sep
+      type: divider
+      label: Link 
+
+    - name : link
+      type : link
+      value :
+        url:
+        target:
+      help : Add link to any blurb element.
+
+    - name: link_type
+      type: select
+      label: Link Apply 
+      value: only_title
+      help: Select where the link will apply.
+      options:
+        only_title: On Title
+        full_section: Full Body
+
+    - name: media_sep
+      type: divider
+      label: Media 
+      
+    - name: icon_enabled
+      type: switch
+      label: Use Icon
+      help: Here you can choose whether icon set below should be used.
+
+    - name: icon
+      type: icon
+      depends:
+        icon_enabled: true
+
+    - name: image
+      type: file-manager
+      depends:
+        icon_enabled: false
+
+    - name: image_alt_text
+      type: text
+      label: Image Alt Text
+      help: Define the HTML ALT text for your image here.
+      depends:
+        icon_enabled: false
+
+    - name: content
+      type: editor
+      value: Lorem ipsum dolor sit amet timeam deleniti mnesarchum ex sed alii hinc dolores ad cum. Urbanitas similique ex nam paulo temporibus ea vis id odio adhuc nostrum eos.
+
+  styles:
+    - name : title_styles
+      type : divider
+      label: Title Style
+
+    - name: header_color
+      type: color
+      label: Title Color
+
+    - name: header_hover_color
+      type: color
+      label: Hover Title Color
+
+    - name : content_styles
+      type : divider
+      label: Content Style
+
+    - name: body_color
+      type: color
+      label: Text Color
+
+    - name: body_hover_color
+      type: color
+      label: Hover Text Color
+
+    - name : blurb_styles
+      type : divider
+      label: Body Style
+
+    - name: bg_color
+      type: color
+      value: rgba(0, 0, 0, 0)
+      label: Background Color
+
+    - name: bg_hover_color
+      type: color
+      value: rgba(0, 156, 255, 1)
+      label: Hover Background
+
+    - name : icon_styles
+      type : divider
+      label: Icon Style
+      depends:
+        icon_enabled: true
+
+    - name: icon_font_size
+      type: slider
+      lable: Icon Font Size
+      suffix: px
+      value : 40
+      depends:
+        icon_enabled: true
+      responsive: true
+
+    - name: icon_color
+      type: color
+      label: Icon Color
+      depends:
+        icon_enabled: true
+
+    - name : border_boxshadow
+      type: divider
+      label: Border
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_radius
+      type: slider
+      label: Border Radius
+      suffix: px
+      value: 3
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
+
+    - name: border_hover_color
+      type: color
+      label: Border Hover Color
+      depends:
+        border: true
+
+  animation:
+
+    - name  : animation_apply
+      type  : select
+      label : Animation Apply 
+      value : 0
+      options: 
+        0 : None
+        body: Blurb Body 
+        media : Blurb Image/Icon 
+        title : Blurb Title 

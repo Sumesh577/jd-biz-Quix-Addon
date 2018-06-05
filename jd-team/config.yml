@@ -1,0 +1,125 @@
+name: JD Team
+slug: jd-team
+groups: JoomDev
+form:
+  general:
+    - name: name
+      type: text
+      help: Input the name of the person
+      value: Team Member 1
+
+    - name: position
+      type: text
+      help: Input the person's position.
+      value: Company Role
+
+    - name: image
+      type: file-manager
+      help: Upload your desired image, or type in the URL to the image you would like to display.
+ 
+    - name: Social Links
+      type: divider
+
+    - name: social-f
+      label: Facebook Link
+      type: text
+      value: https://www.facebook.com/
+
+    - name: social-t
+      label: Twitter Link
+      type: text
+      value: https://twitter.com/  
+
+    - name: social-i
+      label: Instagram Link
+      type: text
+      value: https://www.instagram.com/?hl=en
+
+    - name: social-g
+      label: Google+ Link
+      type: text
+      value: https://plus.google.com/ 
+
+  styles:
+    - name: title_styles
+      type: divider
+
+    - name: header_font
+      type: typography
+      lable: Font
+
+    - name: header_color
+      type: color 
+      label: Text Color
+
+    - name: position_styles
+      type: divider
+
+    - name: position_font
+      type: typography
+      lable: Font
+
+    - name: position_color
+      type: color 
+      label: Text Color
+
+    - name: image_styles
+      type: divider
+      label: Image Styles
+
+    - name: image_style
+      type: select
+      value: square
+      lable: Image Style
+      options:
+        img-square : Square
+        img-rounded: Rounded
+        img-circle : Circle
+
+    - name: social_style
+      type: divider
+
+    - name: icon_color
+      type: color 
+      label: Icon Color 
+
+    - name: icon_hover_color
+      type: color 
+      label: Icon Hover Color 
+  
+    - name: global_style
+      type: divider
+      label: Global Style
+
+    - name: border
+      type: switch
+      label: Enable Border
+
+    - name: border_width
+      type: slider
+      label: Border Width
+      suffix: px
+      value: 2
+      depends:
+        border: true
+
+    - name: border_style
+      type: select
+      value: solid
+      depends:
+        border: true
+      options:
+        solid: Solid
+        dotted: Dotted
+        dashed: Dashed
+        double: Double
+        groove: Groove
+        ridge: Ridge
+        inset: Inset
+        outset: Outset
+
+    - name: border_color
+      type: color
+      label: Border Color
+      depends:
+        border: true
