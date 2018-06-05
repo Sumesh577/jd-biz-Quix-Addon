@@ -17,31 +17,17 @@ form:
       type: file-manager
       help: Upload your desired image, or type in the URL to the image you would like to display.
  
-    - name: Social Links
-      type: divider
-
-    - name: social-f
-      label: Facebook Link
-      type: text
-      value: https://www.facebook.com/
-
-    - name: social-t
-      label: Twitter Link
-      type: text
-      value: https://twitter.com/  
-
-    - name: social-i
-      label: Instagram Link
-      type: text
-      value: https://www.instagram.com/?hl=en
-
-    - name: social-g
-      label: Google+ Link
-      type: text
-      value: https://plus.google.com/ 
+    - name: social
+      type: input-repeater
+      label: Social Links
+      help: 
+      schema:
+        name: link
+        type: text
+      value: ['https://www.twitter.com/themexpert']
 
   styles:
-    - name: title_styles
+    - name: name_styles
       type: divider
 
     - name: header_font
